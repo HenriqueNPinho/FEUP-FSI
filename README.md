@@ -1,9 +1,9 @@
 
 Breve descrição do grupo
 
-* Turno: [LM]XX
-* Grupo: YY
+* Turno: [LM]05
+* Grupo: 04
 * Alunos:
-    - Aluno1 upZZZZZ 
+    - Henrique Pinho up201805000
     - Aluno2 upZZZZZ
     - Aluno3 upZZZZZ
