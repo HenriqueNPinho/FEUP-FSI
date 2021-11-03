@@ -5,5 +5,5 @@ Breve descrição do grupo
 * Grupo: 04
 * Alunos:
     - Henrique Pinho up201805000
-    - Aluno2 upZZZZZ
-    - Aluno3 upZZZZZ
+    - André Costa up201905916
+    - Marcos Pinto up201800177
