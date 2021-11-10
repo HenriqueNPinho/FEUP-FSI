@@ -19,7 +19,7 @@
 ## Exploit
 
 - A execução do exploit explora a diferença do alinhamento dos elementos dos arrays (16 bytes) e do alinhamento da heap do Windows (8 bytes). 
-- Providenciando uma oportunidade de alterar o tipo de variável de um elemento de um array adjacente e ler o conteúdo até a referência original do array.
+- Providenciando uma oportunidade de alterar o tipo de um elemento de um array adjacente, ler o conteúdo e referência original do array.
 - Ou seja, é um exploit do tipo Buffer Overflow na Heap que permite a obtenção de controlo. 
 
 ## Ataques
