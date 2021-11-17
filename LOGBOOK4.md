@@ -4,15 +4,15 @@
 
 - O printenv lista todos os ambientes de variáveis do sistema, para procurar um ambiente especifico, podemos fazer, por exemplo, escrever o comando printenv PWD"  e irá imprimir apenas /home/seed
 
-## Task 2: Passing Environment Variables from Parent Process to Child Process
+### Task 2: Passing Environment Variables from Parent Process to Child Process
 
-## Task 3: Environment Variables and execve()
+### Task 3: Environment Variables and execve()
 
-## Task 4: Environment Variables and system()
+### Task 4: Environment Variables and system()
 
-## Task 5: Environment Variable and Set-UID Programs
+### Task 5: Environment Variable and Set-UID Programs
 
-## Task 6: The PATH Environment Variable and Set-UID Programs
+### Task 6: The PATH Environment Variable and Set-UID Programs
 
 
 
