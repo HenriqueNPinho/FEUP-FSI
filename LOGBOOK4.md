@@ -11,9 +11,12 @@
 
 ### Task 3: Environment Variables and execve()
 
-
+- Quando usamos o array de pointers "environ", o mesmo irá ser usado como ambiente do programa e substituir o processo atual.
+- Por outro lado, quando passamos a variável "NULL", é como se estivéssemos a passar apenas o último apontador no array, significando que não estamos a usar "environment variables".
 
 ### Task 4: Environment Variables and system()
+
+
 
 ### Task 5: Environment Variable and Set-UID Programs
 
