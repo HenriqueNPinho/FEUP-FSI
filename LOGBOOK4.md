@@ -6,7 +6,12 @@
 
 ### Task 2: Passing Environment Variables from Parent Process to Child Process
 
+- Foi observado que quando fork() é realizado num programa, o processo 'filho' possui o mesmo ambiente de trabalho do processo 'pai', logo quando realizamos printenv vemos que não há diferença entre os dois ambientes.
+- Um processo filho usa o mesmo pc (program counter) e também os mesmos registos do CPU.
+
 ### Task 3: Environment Variables and execve()
+
+
 
 ### Task 4: Environment Variables and system()
 
@@ -23,12 +28,9 @@ O primeiro passo foi aceder a página do servidor wordpress e fazer a análise d
 A informações coletadas foram: 
 
 - versão do wordpress 5.8.2;
-
--plugin instalado woocommerce 5.7.1;
-
--Tema do storefront (... gutenber-blocks.css versão 3.9,1);
-
--entre outras;
+- plugin instalado woocommerce 5.7.1;
+- Tema do storefront (... gutenber-blocks.css versão 3.9,1);
+- entre outras;
 
 Uma coisa que ajudou foi procurar por wp-content e wp-content/plugins na área de pesquisa do documento html (uma vez que já sabiamos que era um seridor wordpress).
 
