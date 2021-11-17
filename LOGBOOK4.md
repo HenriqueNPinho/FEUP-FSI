@@ -30,6 +30,7 @@
 # CTF
 
 ###Reconhecimento:
+
 O primeiro passo foi aceder a página do servidor wordpress e fazer a análise da programação do site (com as ferramentas para developers do web browser). Ápos isso, no html da página, procuramos por informações que pudessem ajudar na identificação de uma vulnerabilidade.
 A informações coletadas foram: 
 
