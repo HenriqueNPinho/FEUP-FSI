@@ -1,23 +1,22 @@
-TRABALHO REALIZADO NA SEMANA #4
+# TRABALHO REALIZADO NA SEMANA #4
 
-Task 1: Manipulating Environment Variables
+##Task 1: Manipulating Environment Variables
 
+- O printenv lista todos os ambientes de variáveis do sistema, para procurar um ambiente especifico, podemos fazer, por exemplo, escrever o comando printenv PWD"  e irá imprimir apenas /home/seed
 
+##Task 2: Passing Environment Variables from Parent Process to Child Process
 
+##Task 3: Environment Variables and execve()
 
-Task 2: Passing Environment Variables from Parent Process to Child Process
+##Task 4: Environment Variables and system()
 
-Task 3: Environment Variables and execve()
+##Task 5: Environment Variable and Set-UID Programs
 
-Task 4: Environment Variables and system()
-
-Task 5: Environment Variable and Set-UID Programs
-
-Task 6: The PATH Environment Variable and Set-UID Programs
-
+##Task 6: The PATH Environment Variable and Set-UID Programs
 
 
-CTF
+
+# CTF
 
 Reconhecimento
 O primeiro passo foi aceder a página do servidor wordpress e fazer a análise da programação do site (com as ferramentas para developers do web browser). Ápos isso, no html da página, procuramos por informações que pudessem ajudar na identificação de uma vulnerabilidade.
