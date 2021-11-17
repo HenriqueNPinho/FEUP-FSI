@@ -22,10 +22,10 @@ Reconhecimento
 O primeiro passo foi aceder a página do servidor wordpress e fazer a análise da programação do site (com as ferramentas para developers do web browser). Ápos isso, no html da página, procuramos por informações que pudessem ajudar na identificação de uma vulnerabilidade.
 A informações coletadas foram: 
 
-    versão do wordpress 5.8.2;
-    plugin instalado woocommerce 5.7.1;
-    Tema do storefront (... gutenber-blocks.css versão 3.9,1);
-    dentre outras;
+- versão do wordpress 5.8.2;
+-plugin instalado woocommerce 5.7.1;
+-Tema do storefront (... gutenber-blocks.css versão 3.9,1);
+-entre outras;
 
 Uma coisa que ajudou foi procurar por wp-content e wp-content/plugins na área de pesquisa do documento html (uma vez que já sabiamos que era um seridor wordpress).
 
