@@ -16,9 +16,12 @@
 
 ### Task 4: Environment Variables and system()
 
-
+- A chamada do system() cria "automaticamente" um processo filho que permite executar o comando da shell e finalizar o programa atual. Enquanto que a chamada do execve() substitui  o processo atual pela execução do comando pedido, para ter um efeito semelhante ao system teríamos que usar o fork(). 
 
 ### Task 5: Environment Variable and Set-UID Programs
+
+- Set-UID que significa set user ID on execution é um tipo especial de permissão no Unix e Unix-like OS (como linux). Permite correr certos programas como privilégios escalonados.
+- A shell possui implementações contra permitir acesso a variaveis sensiveis quando a correr com privilégios escalonados (isto é a correr com autorizações de outro user).
 
 ### Task 6: The PATH Environment Variable and Set-UID Programs
 
