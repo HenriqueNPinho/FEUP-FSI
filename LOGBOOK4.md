@@ -20,7 +20,7 @@
 
 ### Task 5: Environment Variable and Set-UID Programs
 
-- Set-UID que significa set user ID on execution é um tipo especial de permissão no Unix e Unix-like OS (como linux). Permite correr certos programas como privilégios escalonados.
+- Set-UID que significa set user ID on execution é um tipo especial de permissão no Unix e Unix-like OS (como linux). Permite correr certos programas com privilégios escalonados.
 - A shell possui implementações contra permitir acesso a variaveis sensiveis quando a correr com privilégios escalonados (isto é a correr com autorizações de outro user).
 
 ### Task 6: The PATH Environment Variable and Set-UID Programs
