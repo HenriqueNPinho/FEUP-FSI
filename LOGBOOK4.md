@@ -20,7 +20,7 @@
 
 ### Task 5: Environment Variable and Set-UID Programs
 
-- Set-UID que significa set user ID on execution é um tipo especial de permissão no Unix e Unix-like OS (como linux). Permite correr certos programas com privilégios escalonados.
+- Set-UID (set user ID on execution) é um tipo especial de permissão no Unix e Unix-like OS (como linux). Permite correr certos programas com privilégios escalonados.
 - A shell possui implementações contra permitir acesso a variaveis sensiveis quando a correr com privilégios escalonados (isto é a correr com autorizações de outro user).
 
 ### Task 6: The PATH Environment Variable and Set-UID Programs
@@ -39,16 +39,16 @@ A informações coletadas foram:
 - Tema do storefront (... gutenber-blocks.css versão 3.9,1);
 - entre outras;
 
-Uma coisa que ajudou foi procurar por wp-content e wp-content/plugins na área de pesquisa do documento html (uma vez que já sabiamos que era um seridor wordpress).
+Uma coisa que ajudou foi procurar por wp-content e wp-content/plugins na área de pesquisa do documento html (uma vez que já sabiamos que era um servidor wordpress).
 
 As possíveis contas de usuários também foram verificadas utilizando o link: http://ctf-fsi.fe.up.pt:5001/wp-json/wp/v2/users/1.
 Onde indicava que o admin possui o nome "admin" e o id associado a conta é 1 (o que nós ajudoou mais tarde).
 
 Com essas informações procuramos em diferentes sites sobre cves associados as mesmas. Com algum trabalho encontramos o CVE-2021-34646, que funcionava com as informações que tinhamos. (e com isso obtivemos a flag do desafio 1).
 
-Porcuramos por um exploit já feito para a CVE-2021-34646, encontramos no site "https://www.exploit-db.com/exploits/50299"; a utilização da mesma foi simples e funcional.
+Porcuramos por um exploit já feito para o CVE-2021-34646, encontramos no site "https://www.exploit-db.com/exploits/50299"; a utilização da mesma foi simples e funcional.
 
-Para corrermos o exploit foi simpleste utilizar o comando: python 50299.py website_pretendido id_da_conta (como mencionado no própio exploit). No nosso caso foi: python 50299.py ctf http://ctf-fsi.fe.up.pt:5001/ 1
+Para corrermos o exploit foi simpleste utilizar o comando: python 50299.py website_pretendido id_da_conta (como mencionado no própio exploit). No nosso caso foi: python 50299.py http://ctf-fsi.fe.up.pt:5001/ 1
 Id 1 pois representava o admin (segundo o que verficamos). O exploit deu-nos alguns links em que um deles redirecionava para a página do admin já autenticada.
 
 Com isso foi simplesmente abrir a página onde se encrontrava a flag do desafio 2.
