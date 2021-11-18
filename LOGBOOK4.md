@@ -48,7 +48,7 @@ Com essas informações procuramos em diferentes sites sobre cves associados as 
 
 Porcuramos por um exploit já feito para o CVE-2021-34646, encontramos no site "https://www.exploit-db.com/exploits/50299"; a utilização da mesma foi simples e funcional.
 
-Para corrermos o exploit foi simpleste utilizar o comando: python 50299.py website_pretendido id_da_conta (como mencionado no própio exploit). No nosso caso foi: python 50299.py http://ctf-fsi.fe.up.pt:5001/ 1
-Id 1 pois representava o admin (segundo o que verficamos). O exploit deu-nos alguns links em que um deles redirecionava para a página do admin já autenticada.
+Para corrermos o exploit foi simpleste utilizar o comando: python 50299.py website_pretendido id_da_conta (como mencionado no própio exploit). No nosso caso foi: python 50299.py http://ctf-fsi.fe.up.pt:5001/ 1 .
+    Id 1 pois representava o admin (segundo o que verficamos). O exploit deu-nos alguns links em que um deles redirecionava para a página do admin já autenticada.
 
 Com isso foi simplesmente abrir a página onde se encrontrava a flag do desafio 2.
