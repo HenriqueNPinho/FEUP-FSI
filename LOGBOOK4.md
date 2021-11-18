@@ -25,7 +25,7 @@
 
 ### Task 6: The PATH Environment Variable and Set-UID Programs
 
-
+- Executou-se o programa task6 (do código pedido para ser compilado), com setUID (privilégios escalonados), e executamos ls através de um system(), que no momento de excução possuia privilégios root. No momento, o 'temporary environment variable' apontava para a ls referente ao programa zsh (quando fizemos: sudo ln -sf /bin/zsh /bin/sh). Como o zsh foi executado com priviégios root, conseguimos ter uma shell com privilégios escalonados. (e fazer bypass da proteção do /bin/sh e /bin/bash que alterava a shell para o id real (remover privilégios) ).
 
 # CTF
 
