@@ -2,7 +2,7 @@
 
 ### Task 1: Manipulating Environment Variables
 
-- O printenv lista todos os ambientes de variáveis do sistema, para procurar um ambiente especifico, podemos fazer, por exemplo, escrever o comando printenv PWD"  e irá imprimir apenas /home/seed
+- O printenv lista todos os ambientes de variáveis do sistema, para procurar um ambiente especifico, podemos fazer, por exemplo, escrever o comando printenv "PWD"  e irá imprimir apenas /home/seed
 
 ### Task 2: Passing Environment Variables from Parent Process to Child Process
 
@@ -25,7 +25,7 @@
 
 ### Task 6: The PATH Environment Variable and Set-UID Programs
 
-- Executou-se o programa task6 (do código pedido para ser compilado), com setUID (privilégios escalonados), e executamos ls através de um system(), que no momento de excução possuia privilégios root. No momento, o 'temporary environment variable' apontava para a ls referente ao programa zsh (quando fizemos: sudo ln -sf /bin/zsh /bin/sh). Como o zsh foi executado com priviégios root, conseguimos ter uma shell com privilégios escalonados. (e fazer bypass da proteção do /bin/sh e /bin/bash que alterava a shell para o id real (remover privilégios) ).
+- Executou-se o programa da 'Task 6'  (do código pedido para ser compilado), com setUID (privilégios escalonados), e executamos o comando 'ls' através de um system(), que no momento de excução possuia privilégios root. No momento, o 'temporary environment variable' apontava para a ls referente ao programa zsh (quando fizemos: sudo ln -sf /bin/zsh /bin/sh). Como o zsh foi executado com priviégios root, conseguimos ter uma shell com privilégios escalonados. (e fazer bypass da proteção do /bin/sh e /bin/bash que alterava a shell para o id real (remover privilégios) ).
 
 # CTF
 
