@@ -21,15 +21,15 @@
 
 ![task3_2](https://cdn.discordapp.com/attachments/903555414715670578/913194194485522433/task3_22.png)
 ![task3_3](https://cdn.discordapp.com/attachments/903555414715670578/913194194720411688/task3_33.png)
-![task3_4](https://cdn.discordapp.com/attachments/903555414715670578/913194194229678080/task3_44.png)
-![task3_5](https://cdn.discordapp.com/attachments/903555414715670578/913194194229678080/task3_55.png)
+![task3_4](https://cdn.discordapp.com/attachments/903555414715670578/913194195009802261/task3_44.png)
+![task3_5](https://cdn.discordapp.com/attachments/903555414715670578/913194195265667122/task3_55.png)
 
 - With the information collected we are now to actually create the actual badfile with the help of exploit.py, however first we need to change some infomation in it.
 
-![task3_6](https://cdn.discordapp.com/attachments/903555414715670578/913194194229678080/task3_66.png)
+![task3_6](https://cdn.discordapp.com/attachments/903555414715670578/913194195508920341/task3_66.png)
 
 - The information we changed and how we got/calculated them is:
--- test.
+. test.
 
 # CTF
 
