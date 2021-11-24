@@ -29,7 +29,18 @@
 ![task3_6](https://cdn.discordapp.com/attachments/903555414715670578/913194195508920341/task3_66.png)
 
 - The information we changed and how we got/calculated them is:
-. test.
+- 1) start : We changed this infomration to "490", the reason for this number is because the buffer has a size of 517 and our shellcode has a size of 27bytes, and we decided to put our shellcode at the end of the buffer, and 517-27=490. 
+-  (in this case, since we can point exactly to our shellcode, it is not necessary but if we put the shellcode at the end in normal condition, we are able to "miss" the pointer but have our code have 0s with means jump to the next instruction. Eventually we get to our shellcode).
+
+- 2) ret: This is the return in which we want to change to point to our shellcode. We know that the buffer starts at 0xFFFFC9AC and that its size is 517. We put our shellcode 27bytes before the end so at 0xFFFFC9AC + 490 (in decimal). This gave our return address which was 0xFFFFCB96.
+
+- 3) offset: This is where we need to inject our return adress that points to our shellcode. We now that return we want to change is after the ebp, we also know that the ebp has a size of 4 bytes. If we 0xFFFFCA18 (ebp address) - 0xFFFFC9AC (buffer address) we get that the ebp starts at 108 bytes after the buffer. Then we add the size of the ebd (the 4 bytes) and we get 112, which is the place of the return we want to modify.
+
+Running the exploit:
+
+- We open the terminal where exploit.py and stack-L1 is located. We run exploit.py creating the badfile we need to use the exploit. Then we run stack-L1 and get access to rootshell. (See image below) 
+
+![task3_7](https://cdn.discordapp.com/attachments/903555414715670578/913194197522219069/task3_77.png)
 
 # CTF
 
