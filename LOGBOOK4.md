@@ -44,16 +44,16 @@ As informações coletadas foram:
 Uma coisa que ajudou, foi procurar por wp-content e wp-content/plugins na área de pesquisa do documento html (uma vez que já sabiamos que era um servidor wordpress).
 
 As possíveis contas de usuários também foram verificadas utilizando o link: http://ctf-fsi.fe.up.pt:5001/wp-json/wp/v2/users/1.
-(.. Onde indicava que o admin possui o nome "admin" e o id associado a conta é 1 (o que nos ajudou mais tarde). ..)
+Onde indicava que o admin possui o nome "admin" e o id associado a conta é 1 (o que nos ajudou mais tarde).
 
 Com essas informações, procuramos em diferentes sites sobre CVEs associados às mesma e, com algum trabalho, encontramos o CVE-2021-34646, que funcionava com as informações que tinhamos. Com isto, obtivemos a flag do desafio 1.
 
 **_Desafio 2_**
 
-Porcuramos por um exploit já feito para o CVE-2021-34646, encontramos no site "https://www.exploit-db.com/exploits/50299"; (.. a utilização da mesma foi simples e funcional. ..)
+Procuramos por um exploit já feito para o CVE-2021-34646, encontramos no site "https://www.exploit-db.com/exploits/50299"; a utilização do mesmo foi simples e funcional.
 
 Para corrermos o exploit, utilizamos o comando: python 50299.py website_pretendido id_da_conta, como mencionado no própio exploit. 
-No nosso caso foi: python 50299.py http://ctf-fsi.fe.up.pt:5001/ 1 . (.. o 1 não é junto ..)
+No nosso caso foi: python 50299.py http://ctf-fsi.fe.up.pt:5001/ 1 .
 - Id 1, pois representava o admin (segundo o que verficamos). O exploit deu-nos alguns links em que um deles redirecionava para a página do admin já autenticada.
 
 Com isso, chegamos a página onde se encrontrava a flag do desafio 2.
