@@ -2,6 +2,8 @@
 
 ### Task 1: Manipulating Environment Variables
 
+![cmd](https://media.discordapp.net/attachments/903555414715670578/908650101080227860/unknown.png?width=500&height=315)
+
 - O printenv lista todos os ambientes de variáveis do sistema, para procurar um ambiente especifico, podemos fazer, por exemplo, escrever o comando printenv "PWD"  e irá imprimir apenas /home/seed
 
 ### Task 2: Passing Environment Variables from Parent Process to Child Process
