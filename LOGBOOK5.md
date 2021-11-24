@@ -8,7 +8,8 @@
 
 ### Task 2: Understanding the Vulnerable Program
 
-- Lorem ipsu
+- This task was a preparation for task 3. We first had to turn off some protections linux has by default. Then we had to give onwership to stack.c to root and give the current user of calling the program with root premissions.
+- For task 3 we needed stack-L1 so we checked that it had a buffer of size 517.
 
 ### Task 3: Launching Attack on 32-bit Program (Level 1)
 
