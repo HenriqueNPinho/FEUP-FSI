@@ -2,8 +2,6 @@
 
 ### Task 1: Manipulating Environment Variables
 
-![cmd](https://media.discordapp.net/attachments/903555414715670578/908650101080227860/unknown.png?width=500&height=315)
-
 - O printenv lista todos os ambientes de variáveis do sistema, para procurar um ambiente especifico, podemos fazer, por exemplo, escrever o comando printenv "PWD"  e irá imprimir apenas /home/seed
 
 ### Task 2: Passing Environment Variables from Parent Process to Child Process
@@ -48,6 +46,8 @@ Uma coisa que ajudou, foi procurar por wp-content e wp-content/plugins na área 
 As possíveis contas de usuários também foram verificadas utilizando o link: http://ctf-fsi.fe.up.pt:5001/wp-json/wp/v2/users/1.
 Onde indicava que o admin possui o nome "admin" e o id associado a conta é 1 (o que nos ajudou mais tarde).
 
+![wp](https://media.discordapp.net/attachments/903555414715670578/909357486329458748/unknown.png?width=500&height=350)
+
 Com essas informações, procuramos em diferentes sites sobre CVEs associados às mesma e, com algum trabalho, encontramos o CVE-2021-34646, que funcionava com as informações que tinhamos. Com isto, obtivemos a flag do desafio 1.
 
 **_Desafio 2_**
@@ -56,6 +56,12 @@ Procuramos por um exploit já feito para o CVE-2021-34646, encontramos no site "
 
 Para corrermos o exploit, utilizamos o comando: python 50299.py website_pretendido id_da_conta, como mencionado no própio exploit. 
 No nosso caso foi: python 50299.py http://ctf-fsi.fe.up.pt:5001/ 1 .
+
+![cmd](https://media.discordapp.net/attachments/903555414715670578/909361830688849951/unknown.png?width=500&height=265)
 - Id 1, pois representava o admin (segundo o que verficamos). O exploit deu-nos alguns links em que um deles redirecionava para a página do admin já autenticada.
 
-Com isso, chegamos a página onde se encrontrava a flag do desafio 2.
+![login](https://media.discordapp.net/attachments/903555414715670578/909362360278450186/unknown.png?width=500&height=257)
+
+Com isso, chegamos a página onde se encontrava a flag do desafio 2.
+
+![flag](https://media.discordapp.net/attachments/903555414715670578/909361430208335912/unknown.png?width=500&height=256)
