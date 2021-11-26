@@ -71,6 +71,19 @@ Running the exploit:
 
 ### Desafio 2
 
+- Once again we start by analising the provided main.c
+- The difference from the first challeng is that now we have the BUFFER, val and meme_file. A new condition is that val should be 0xFEFC2122.
 
+![ctf5_7](https://cdn.discordapp.com/attachments/913904956468252695/913908490387464202/ctf5_7.png)
+
+- We edited our exploit-example.py to access ctf-fsi.fe.up.pt 4000 (for the second challenge) and the string to send over, adding the number we need to send before "flag.txt". (see image below)
+
+![ctf5_8](https://cdn.discordapp.com/attachments/913904956468252695/913909112063000606/ctf5_8.png)
+
+- Performing the exploit is succefull:
+
+![ctf5_9](https://cdn.discordapp.com/attachments/913904956468252695/913909476422201395/ctf5_9.png)
+
+- As shown in the image above when sending over the appropiate string we are able to bypass the added security and read "flag.txt" getting the flag we needed for the second challenge.
 
 
