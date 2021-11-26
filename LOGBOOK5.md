@@ -49,9 +49,9 @@ Running the exploit:
 - Since the main.c code was provided we start by examing it and trying to find a way to exploit it.
 - We were able to see that our BUFFER had a size of bytes, however scanf was reading 28 bytes.
 
-![ctf5_1](https://drive.google.com/file/d/1k26eEApOPw_pwE3lUDug8p4qQShBMRBn/view?usp=sharing)
+![ctf5_1](https://cdn.discordapp.com/attachments/913904956468252695/913905018065809418/ctf5_1.png)
 
 - We can overwrite meme_file because conveniently it has 8 bytes and it is located in the right placed.
 
-![ctf5_2](https://drive.google.com/file/d/1zOneMupjItlVUaimID9odCvnAGIPuJPN/view?usp=sharing)
+![ctf5_2](https://cdn.discordapp.com/attachments/913904956468252695/913905121895792640/ctf5_2.png)
 
