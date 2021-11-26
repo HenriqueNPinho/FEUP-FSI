@@ -84,6 +84,6 @@ Running the exploit:
 
 ![ctf5_9](https://cdn.discordapp.com/attachments/913904956468252695/913909476422201395/ctf5_9.png)
 
-- As shown in the image above when sending over the appropiate string we are able to bypass the added security and read "flag.txt" getting the flag we needed for the second challenge.
+- As shown in the image above when sending over the appropriate string we are able to bypass the added security and read "flag.txt" getting the flag we needed for the second challenge.
 
 
