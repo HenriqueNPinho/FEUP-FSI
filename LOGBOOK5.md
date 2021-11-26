@@ -66,6 +66,7 @@ Running the exploit:
 - Since we tested using in the debug mode, we will try to launch the exploit without it. Calling the exploit-example.py to ctf-fsi.fe.up.pt 4003 we are able to find the flag for challenge 1. (see images below)
 
 ![ctf5_5](https://cdn.discordapp.com/attachments/913904956468252695/913907040672444508/ctf5_51.png)
+
 ![ctf5_6](https://cdn.discordapp.com/attachments/913904956468252695/913907161153814578/ctf5_6.png)
 
 
