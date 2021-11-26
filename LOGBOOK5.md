@@ -51,7 +51,12 @@ Running the exploit:
 
 ![ctf5_1](https://cdn.discordapp.com/attachments/913904956468252695/913905018065809418/ctf5_1.png)
 
-- We can overwrite meme_file because conveniently it has 8 bytes and it is located in the right placed.
+- We can overwrite meme_file because conveniently it has 8 bytes and it is located in the right placed. (See image below)
 
 ![ctf5_2](https://cdn.discordapp.com/attachments/913904956468252695/913905121895792640/ctf5_2.png)
+
+- Editing and running the provided exploit-example.py to write 28 bytes, the last 8 ones being "flag.txt" (what we wanted meme_file to be).
+
+![ctf5_5](https://cdn.discordapp.com/attachments/913904956468252695/913905978368467045/ctf5_3.png)
+
 
