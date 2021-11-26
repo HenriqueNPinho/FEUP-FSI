@@ -46,7 +46,7 @@ Running the exploit:
 
 ### Desafio 1
 
-- Since the main.c code was provided we start by examing it and trying to find a way to exploit it.
+- Since the main.c code was provided we start by examining it and trying to find a way to exploit it.
 - We were able to see that our BUFFER had a size of bytes, however scanf was reading 28 bytes.
 
 ![ctf5_1](https://cdn.discordapp.com/attachments/913904956468252695/913905018065809418/ctf5_1.png)
@@ -59,11 +59,11 @@ Running the exploit:
 
 ![ctf5_3](https://cdn.discordapp.com/attachments/913904956468252695/913905978368467045/ctf5_3.png)
 
-- With that we are able to succefully acces the contents of flag.txt.
+- With that we are able to successfully access the contents of flag.txt.
 
 ![ctf5_4](https://cdn.discordapp.com/attachments/913904956468252695/913906422801121310/ctf5_4.png)
 
-- Since we tested using in the debug mode, we will try to launch the exploit without it. Calling the exploit-example.py to ctf-fsi.fe.up.pt 4003 we are able to find the flag for challenge 1. (see images below)
+- Since we tested using in debug mode, we will try to launch the exploit without it. Calling the exploit-example.py to ctf-fsi.fe.up.pt 4003 we are able to find the flag for challenge 1. (see images below)
 
 ![ctf5_5](https://cdn.discordapp.com/attachments/913904956468252695/913907040672444508/ctf5_51.png)
 
@@ -71,8 +71,8 @@ Running the exploit:
 
 ### Desafio 2
 
-- Once again we start by analising the provided main.c
-- The difference from the first challeng is that now we have the BUFFER, val and meme_file. A new condition is that val should be 0xFEFC2122.
+- Once again we start by analyzing the provided main.c .
+- The difference from the first challenge is that now we have the BUFFER, val and meme_file. A new condition is that val should be 0xFEFC2122.
 
 ![ctf5_7](https://cdn.discordapp.com/attachments/913904956468252695/913908490387464202/ctf5_7.png)
 
@@ -80,7 +80,7 @@ Running the exploit:
 
 ![ctf5_8](https://cdn.discordapp.com/attachments/913904956468252695/913909112063000606/ctf5_8.png)
 
-- Performing the exploit is succefull:
+- Performing the exploit is successful:
 
 ![ctf5_9](https://cdn.discordapp.com/attachments/913904956468252695/913909476422201395/ctf5_9.png)
 
