@@ -44,4 +44,14 @@ Running the exploit:
 
 # CTF
 
-- Lorem ipsu
+### Desafio 1
+
+- Since the main.c code was provided we start by examing it and trying to find a way to exploit it.
+- We were able to see that our BUFFER had a size of bytes, however scanf was reading 28 bytes.
+
+![ctf5_1](https://drive.google.com/file/d/1k26eEApOPw_pwE3lUDug8p4qQShBMRBn/view?usp=sharing)
+
+- We can overwrite meme_file because conveniently it has 8 bytes and it is located in the right placed.
+
+![ctf5_2](https://drive.google.com/file/d/1zOneMupjItlVUaimID9odCvnAGIPuJPN/view?usp=sharing)
+
