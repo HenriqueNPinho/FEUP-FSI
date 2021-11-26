@@ -57,6 +57,17 @@ Running the exploit:
 
 - Editing and running the provided exploit-example.py to write 28 bytes, the last 8 ones being "flag.txt" (what we wanted meme_file to be).
 
-![ctf5_5](https://cdn.discordapp.com/attachments/913904956468252695/913905978368467045/ctf5_3.png)
+![ctf5_3](https://cdn.discordapp.com/attachments/913904956468252695/913905978368467045/ctf5_3.png)
+
+- With that we are able to succefully acces the contents of flag.txt.
+
+![ctf5_4](https://cdn.discordapp.com/attachments/913904956468252695/913906422801121310/ctf5_4.png)
+
+- Since we tested using in the debug mode, we will try to launch the exploit without it. Calling the exploit-example.py to ctf-fsi.fe.up.pt 4003 we are able to find the flag for challenge 1. (see images below)
+
+![ctf5_5](https://cdn.discordapp.com/attachments/913904956468252695/913907040672444508/ctf5_51.png)
+![ctf5_6](https://cdn.discordapp.com/attachments/913904956468252695/913907161153814578/ctf5_6.png)
+
+
 
 
