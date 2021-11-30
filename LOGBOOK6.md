@@ -14,6 +14,6 @@
 
 ### Task 2: Printing out the Server Program's Memory
 
->1. a) The goal for task 2.a is to read the first 4 bytes of our string (the >one we send to the server). For this we change our string to have the 4 bytes >we want to read in the beginning (in our case we chose 0xAABBCCDD). After >that, we write “%x” as many times as needed until we reach the beginning of >our string, in which the content of our string is read by the printf().
+>A. The goal for task 2.a is to read the first 4 bytes of our string (the >one we send to the server). For this we change our string to have the 4 bytes >we want to read in the beginning (in our case we chose 0xAABBCCDD). After >that, we write “%x” as many times as needed until we reach the beginning of >our string, in which the content of our string is read by the printf().
 >
->- In our case the amount of “%x” needed was 64. This number can be obtained by >trial and error, however a better way to find it is to use gdb and its >position and where we are in the stack.
+>>- In our case the amount of “%x” needed was 64. This number can be obtained >>by trial and error, however a better way to find it is to use gdb and its >>position and where we are in the stack.
