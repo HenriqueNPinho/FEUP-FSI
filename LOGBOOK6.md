@@ -30,6 +30,8 @@
 >>
 >>![week6_2](https://cdn.discordapp.com/attachments/913904956468252695/915282967813836911/week6_task2b.jpg)
 >>
+>>- The secret message was: “A secret message”.
+>>
 >
 
 
