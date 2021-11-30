@@ -34,5 +34,17 @@
 >>
 >
 
+### Task 3: Modifying the Server Program's Memory
+
+>>A. For this first task we needed to change the secret variable into something else.
+>>- Like we have done for task 2.b we can access the address by making it the beginning of our string into it (in this case the address is 0x080e5068).
+>>
+>>- We know we can access it by using “%x” 64 times. To change its values from 0x11223344 to something else we can do “%x” 63 times plus “%n”. The explanation for it is the same we used to crash the server, we can write to the address the pointer is pointing to, in this case it was pointing to where the secret variable was located.
+>>
+>>![week6_3](https://cdn.discordapp.com/attachments/913904956468252695/915285305819537458/week6_task3a.jpg)
+>
+>
+>
+>
 
 
