@@ -20,7 +20,7 @@
 >
 >![week6_1](https://cdn.discordapp.com/attachments/913904956468252695/915282120258228264/week6_task2a.jpg)
 
->B.	For task 2.b we needed to read the secret message stored in the heap >area.
+>B.	For task 2.b we needed to read the secret message stored in the heap area.
 >
 >- The server already gives us the address for the message, as such we can >utilize of our own string and what we did in task 2.a to perform task 2.b.
 >
