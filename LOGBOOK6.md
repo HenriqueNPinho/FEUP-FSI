@@ -55,3 +55,7 @@
 - From this exercise we were able to understand how printf() is used to access or change memory from an attacked device, how it can be exploit and what cautions we need to have when using it.
 
 - Also, what effects “%x”, “%s”, “%n” (etc.) have in a string and how we can use it to our advantage when performing an attack.
+
+# CTF
+
+- Lorem ipsu.
