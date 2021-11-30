@@ -28,7 +28,7 @@
 >
 >- Second, we know that to access the begging of our string we must use “%x” 64 >times, however since this time we want to read the content of the address and >not the address itself, we will do “%x” 63 times and “%s” on the 64th time, >since “%s” interprets the number as an address and reads what it is in there.
 >
->![week6_2](https://cdn.discordapp.com/attachments/913904956468252695/>915282967813836911/week6_task2b.jpg)
+>![week6_2](https://cdn.discordapp.com/attachments/913904956468252695/915282967813836911/week6_task2b.jpg)
 >
 
 
