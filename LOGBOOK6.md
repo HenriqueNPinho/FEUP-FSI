@@ -16,6 +16,20 @@
 
 >A. The goal for task 2.a is to read the first 4 bytes of our string (the >one we send to the server). For this we change our string to have the 4 bytes >we want to read in the beginning (in our case we chose 0xAABBCCDD). After >that, we write “%x” as many times as needed until we reach the beginning of >our string, in which the content of our string is read by the printf().
 >
->>- In our case the amount of “%x” needed was 64. This number can be obtained >>by trial and error, however a better way to find it is to use gdb and its >>position and where we are in the stack.
+>- In our case the amount of “%x” needed was 64. This number can be obtained >by trial and error, however a better way to find it is to use gdb and its >position and where we are in the stack.
 >
 >![week6_1](https://cdn.discordapp.com/attachments/913904956468252695/915282120258228264/week6_task2a.jpg)
+
+>B. b)	For task 2.b we needed to read the secret message stored in the heap >area.
+>
+>- The server already gives us the address for the message, as such we can >utilize of our own string and what we did in task 2.a to perform task 2.b.
+>
+>- First, we write the address of the secret message in the beginning of our string (in this case 0x080b4008).
+>
+>- Second, we know that to access the begging of our string we must use “%x” 64 >times, however since this time we want to read the content of the address and >not the address itself, we will do “%x” 63 times and “%s” on the 64th time, >since “%s” interprets the number as an address and reads what it is in there.
+>
+>![week6_2](https://cdn.discordapp.com/attachments/913904956468252695/>915282967813836911/week6_task2b.jpg)
+>
+
+
+
