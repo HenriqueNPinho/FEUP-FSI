@@ -18,4 +18,4 @@
 >
 >>- In our case the amount of “%x” needed was 64. This number can be obtained >>by trial and error, however a better way to find it is to use gdb and its >>position and where we are in the stack.
 >
->![week6_1](https://cdn.discordapp.com/attachments/913904956468252695/915281546418745364/unknown.png)
+>![week6_1](https://cdn.discordapp.com/attachments/913904956468252695/915282120258228264/week6_task2a.jpg)
