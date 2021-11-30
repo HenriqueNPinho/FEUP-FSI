@@ -43,8 +43,15 @@
 >>
 >>![week6_3](https://cdn.discordapp.com/attachments/913904956468252695/915285305819537458/week6_task3a.jpg)
 >
->
->
+>>B. This is a more elaborated task for the 3.a, not only we have to change the value of the secret variable, but we must change it to a specific value: 0x5000.
+>>
+>>- We know that “%n” print the number of characters printed in the string so far, so to be able to make it write 0x5000, we must make it so that our string has 5000 characters before it
+>>- After that it is a simple as task 3.a:
+>>
+>>![week6_4](https://cdn.discordapp.com/attachments/913904956468252695/915286339094716447/week6_task3b.jpg)
+>>
 >
 
+- From this exercise we were able to understand how printf() is used to access or change memory from an attacked device, how it can be exploit and what cautions we need to have when using it.
 
+- Also, what effects “%x”, “%s”, “%n” (etc.) have in a string and how we can use it to our advantage when performing an attack.
