@@ -58,4 +58,79 @@
 
 # CTF
 
-- Lorem ipsu.
+### Challenge 1
+
+>The first thing we did was identify the security properties using checksec:
+>
+>![week6_ctf_0](https://cdn.discordapp.com/attachments/913904956468252695/917888850146234389/ctf6_challenge1_0.png)
+>
+>From that we can see that although we have protection the is no PIE (which provides some address randomness to the main executable). With that we know that we may be able to perform a string format if we have a scanf in the program.
+>
+>Luckily analyzing the code we can see that there is one:
+>
+>![week6_ctf_1](https://cdn.discordapp.com/attachments/913904956468252695/917891408831066142/Inkedctf6_challenge1_1.jpg)
+>
+>Since there is a scanf we can pass to it our string. We also can see that there is a function that opens the flag.txt for us, so if we are able to run it we can read its content and get that flag.
+>
+>We can execute the program with gdb and use "p load_flag" to see where the file is, and since PIE is off we know that the address won't change the next time we run it.
+>
+>![week6_ctf_2](https://cdn.discordapp.com/attachments/913904956468252695/917893417084801035/week6_challenge1_2.jpg)
+>
+>We already know the address of the function, so now we just need to read it. Since we can pass our string we can write load_flag()'s address and the use '%s' to read it. So, we change exploit_example.py to reflect this:
+>
+>![week6_ctf_3](https://cdn.discordapp.com/attachments/913904956468252695/917895254240288828/ctf6_challenge1_3.png)
+>
+>Now that we have our exploit_example.py ready, we just execute it (and get the flag for the first challenge):
+>
+>![week6_ctf_4](https://cdn.discordapp.com/attachments/913904956468252695/917895572248211506/ctf6_challenge1_4.png)
+>
+
+### Challenge 2
+
+>The second challenge is a hardened version of the same task. When we run checksec we can see that there is the same restrictions from the first challenge.
+>
+>Looking at the code provided we can see that this time we don't have a function that already opens our code, however if we are able to set key = 0xBEEF we can run BASH we open it ourselves.
+>
+>![week6_ctf_5](https://cdn.discordapp.com/attachments/913904956468252695/917897574445359174/ctf6_challenge2_1.png)
+>
+>Like last time, we run program with gdb to find where the variable is located, since we don't want the value of key but its address we do "p &key".
+>
+>![week6_ctf_6](https://cdn.discordapp.com/attachments/913904956468252695/917898261904392262/ctf6_challenge2_0.png)
+>
+>We know where key is located. We can use scanf to our advantage (once again), we can put the address where key is located to in our string and pass it 0xBEEF using '%n". But there is a little problem: 
+>
+>>'%n' writes the number of characters we have written so far in our string. 
+>>
+>>To solve this we can use '%.Ax" (where A is the amount of characters we want to read a var) and set it so the size we want.
+>>
+>>Since, '%x' read from an address we have to keep that in mind. So, we can format our string to be like:
+>>
+>>address for %x + address for %n + '%.Ax' + '%n'
+>>
+>>We just have to remember that writing the addresses takes some chars in size, so we have so subtract it from 0xBEEF.
+>
+>Calculating A:
+>
+>>Now that we know how to write our string we have to calculate 'A':
+>>
+>> 0xBEEF = 48879
+>>
+>> We know that we have written 8 chars so far for our address, that left us with 48879 - 8 = 48871.
+>>
+>> This is the number we got to substitute 'A' for.
+>
+>Going to exploit_example.py we change to now send the string we have prepared:
+>
+>![week6_ctf_7](https://cdn.discordapp.com/attachments/913904956468252695/917902258010734602/ctf6_challenge2_3.png)
+>
+>OBS: Let's also change the port for the remote connection.
+>
+>When we run our exploit it is successful, and we get access to BASH, to open flag.txt and read it we simply do "cat flag.txt":
+>
+>![week6_ctf_8](https://cdn.discordapp.com/attachments/913904956468252695/917902757007081472/ctf6_challenge2_4.png)
+>
+>And here is a close up:
+>
+>![week6_ctf_9](https://cdn.discordapp.com/attachments/913904956468252695/917903055721205830/ctf6_challenge2_4.png)
+>
+With challenge 1 and 2 solved we have solved the ctf.
