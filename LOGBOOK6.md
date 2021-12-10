@@ -115,7 +115,7 @@
 >>
 >> 0xBEEF = 48879
 >>
->> We know that we have written 8 chars (more precisely how many bytes we have written so far) so far for our address, that left us with 48879 - 8 = 48871.
+>> We know that we have written 8 chars so far for our address, that left us with 48879 - 8 = 48871.
 >>
 >> This is the number we got to substitute 'A' for.
 >
