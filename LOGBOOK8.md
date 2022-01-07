@@ -120,6 +120,15 @@
 
 ### Challenge 2
 
+>One funcionality that we had access to was to do a ping to an host.
+>We tried different commands and concluded that a system call linux was being made.
+>So with the command | ls, we got access to the files of that host. With that we only needed to do | cat flag.txt.
 >
+>![week8_ctf_3](https://cdn.discordapp.com/attachments/903555414715670578/928358433500049448/unknown.png)
 >
+>![week_ctf_4](https://cdn.discordapp.com/attachments/903555414715670578/928358240889217044/unknown.png)
+>
+>And with this, we got the flag:
+>
+>![week_ctf_5](https://cdn.discordapp.com/attachments/903555414715670578/928358131925389393/unknown.png)
 >
