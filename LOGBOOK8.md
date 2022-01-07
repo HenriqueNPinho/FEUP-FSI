@@ -122,7 +122,7 @@
 
 >One funcionality that we had access to was to do a ping to an host.
 >We tried different commands and concluded that a system call linux was being made.
->So with the command ; ls, we got access to the files of that host, because it try to run the command ping, it results on an error and than it runs the command "ls". With that we only needed to do ; cat /flag.txt.
+>So with the command ; ls, we got access to the files of that host, because it runs the command ping then it runs the command "ls" and it worked. With that we only needed to do ; cat /flag.txt to get the its content.
 >
 >![week8_ctf_3](https://cdn.discordapp.com/attachments/903555414715670578/928941960985731102/unknown.png)
 >
