@@ -76,3 +76,129 @@
 >>![week11_7](https://cdn.discordapp.com/attachments/903555414715670578/933497905422155786/unknown.png)
 >
 >>![week11_8](https://cdn.discordapp.com/attachments/903555414715670578/933498273354899466/unknown.png)
+
+### Task 4:  Deploying Certificate in an Apache-Based HTTPS Website
+
+>
+>For this task we had to deploy a webiste with a certificate (meaning it will have a https connection).
+>
+>To accomplish this we wil be using an Apache server.
+>
+>First, we edit the appache config file (bank32 apache ssl.conf), to the following configuration:
+>
+>><VirtualHost *:443>\
+>>DocumentRoot /var/www/bank32\
+>>ServerName www.bank32.com\
+>>ServerAlias www.bank32A.com\
+>>ServerAlias www.bank32B.com\
+>>DirectoryIndex index.html\
+>>SSLEngine On\
+>>SSLCertificateFile &#47;certs&#47;bank32.crt ➀\
+>>SSLCertificateKeyFile &#47;certs&#47;bank32.key ➁\
+>><&#47;VirtualHost>
+>>
+>>
+>><VirtualHost *:80>\
+>>    DocumentRoot /var/www/bank32\
+>>    ServerName www.example.com\
+>>    DirectoryIndex index_red.html\
+>><&#47;VirtualHost>
+>
+>After that we need to enable apache's ssl module and enable the site. We ran the commands:
+>
+>>a2enmod ssl
+>>
+>>a2ensite bank32_apache_ssl
+>
+>This resulted in:
+>
+>![week11_9](https://cdn.discordapp.com/attachments/913904956468252695/934166310466777178/unknown.png)
+>
+>After Apache had been configured we could start the server. For that we used the command "service apache2 start".
+>
+>![week11)10](https://media.discordapp.net/attachments/903555414715670578/933476974230384640/unknown.png)
+>
+>We can already access the website however we get a warning:
+>
+>![week11_11](https://media.discordapp.net/attachments/903555414715670578/934007457980768256/unknown.png?width=904&height=663)
+>
+>This means that while our certificate is being recognized it is from an unknown (or untrusted) CA. 
+>
+>We can add our CA in the list of truted CAs within Firefox. To do this we need to add the file "ca.crt" to preferences -> Pravate & Security -> View Certificate.
+>
+>![week11_12](https://cdn.discordapp.com/attachments/913904956468252695/934171428297769010/unknown.png)
+>
+>This makes it consider it secure, but even after it gives a statement about it:
+>
+>![week11_13](https://cdn.discordapp.com/attachments/903555414715670578/934007669512089630/unknown.png)
+>
+>This is essentially because of what makes a certificate a good way to verify a website: that there is not a large group of authorities. Because there is only a selected group of CA it is possible to verify its authenticity and know who to trust. 
+>
+>Therefore because our source is "weird" to Firefox even after we said we trusted it still acts in a cautiously way.
+>
+>This is how the website looks after all the steps we have done, it is possible to notice that the lock on the left of the url doesn't show anything weird (although if we click it it show the meesage we talked before):
+>
+>![week11_14](https://media.discordapp.net/attachments/903555414715670578/934029496133251143/unknown.png?width=1349&height=663)
+
+### Task 5: Launching a Man-In-The-Middle Attack
+
+>In this task we will try to impersonate a website. For this we will be trying to try and create a fake "www.example.com".
+>
+>The first step is to setup the site like we did for www.bank32.com
+>
+>We will change the config file, which will now look like this:
+>
+>![week11_15](https://cdn.discordapp.com/attachments/913904956468252695/934174036085321738/unknown.png)
+>
+>We also have to change the hosts folder (to be able to modfy this file we will use gedit admin:///etc/hosts):
+>
+>![week11_16](https://cdn.discordapp.com/attachments/903555414715670578/934010754540122112/unknown.png)
+>
+>After that we can rebuild docker with "dockbuild" and start apache once again.
+>
+>Now that the server is running, when we try to acces it gives a different warnging:
+>
+>![week11_17](https://media.discordapp.net/attachments/903555414715670578/934016404267606016/unknown.png)
+>
+>The reason for this is because we are trying to use the certificate we generate for "www.bank32.com" with "www.example.com". Firefox can recognize that something is not right and gives us this warning.
+>
+>This shows that a MITM attack was not successful because the browser could pick it up.
+
+### Task 6: Launching a Man-In-The-Middle Attack with a Compromised CA
+
+>For this task we had to assume that our CA was compromised by an attacker. Therefore, the attacker can generate its own certificates for the fake website.
+>
+>So, first, we generate the certificate for oue scan website (www.example.com). To do this we only need to run the command from task 2 but changing it now from "www.bank32.com" to "www.example.com" and etc.\
+>Here is what we did:
+>
+>![week11_18](https://cdn.discordapp.com/attachments/903555414715670578/934022772118667264/unknown.png)
+>
+>After this is needed to sign our certificate with our CA. Once again, we only had to perform the same steps as we did before:
+>
+>![week11_19](https://cdn.discordapp.com/attachments/903555414715670578/934024303471636530/unknown.png)
+>
+>After doing this, we had to change our apache config file to reflect the new change:
+>
+>![week11_20](https://cdn.discordapp.com/attachments/913904956468252695/934178266368069693/unknown.png)
+>
+>We also had to load it onto the server by adding it to the "Dockerfile":
+>
+>![week11_21](https://cdn.discordapp.com/attachments/913904956468252695/934178647118594168/unknown.png)
+>
+>Afterwards we could rebuild the docker container and start the apache service.
+>
+>When trying to load our site we can see this:
+>
+>![week11_21](https://cdn.discordapp.com/attachments/903555414715670578/934029496133251143/unknown.png)
+>
+>![week11_22](https://media.discordapp.net/attachments/903555414715670578/934029577267838998/unknown.png)
+>
+>Firefox still shows us a message but we get no warnings this time.
+>
+>This is because the certificate is valid and signed by the CA, also the CN match. 
+>
+>Firefox could also detect that "www.example.com" had another certificate (from the original website and not our bootleg one), however websites having more than one certificate is not a problem.\
+>For example, website may have more than one certificate when one of them is close to expire (to not generate down time).
+>
+>To finish, from this we conclude that if root CA's keys is compromised, then an attacker can create a certificate for themselves and impersonate a website.
+>
