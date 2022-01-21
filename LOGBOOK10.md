@@ -116,26 +116,34 @@
 
 ### Challenge 1
 
-On this challenge we used the following script to "click" on the "Give the flag" button:
-
+>On the first challenge we had a web server at ctf-fsi.fe.up.pt:5002, where we could send requests to the admin asking for the flag.
+>
+>Since we were able to embed a javasript, we tried using that.\
+>By using the following script we were able to get the flag for the first challenge:
+>
 >>![week10_ctf1](https://media.discordapp.net/attachments/903555414715670578/931541225020985375/unknown.png?width=1246&height=701)
-
-Then we waited about 2 minutes until the flag appeared
-
+>
+>The flag took a while to appear but what this code does is get the html with the id "giveflag" and click on it.\
+>The explanation is that the element when click had a funtion that give us the flag.
+>
+>Here is the flag:
+>
 >>![week10_ctf2](https://media.discordapp.net/attachments/903555414715670578/931541175427563560/unknown.png?width=1246&height=701)
 
 ### Challenge 2
 
-The program vulnerability was on gets() function, because it give us the chance to write outside of buffer's alocated space.
-
-To take advantage of the vulnerability we used pwntools module, and used it to get buffer address, we discover where the frame pointer address was and with that information we concluded that the return address was on a 108 bytes offset.
-
-We used the following exploit to complete the atack:
-
+>After looking at the main.c provided we found out that the vulnerability was at gets(buffer), since it allows us to write outside of the supposed place allocated for the variable that is being altered (which means this is a buffer overflow attack).
+>
+>We used an exploit file in python and with the help of pwn (the same tool we used on a past lab), with this we were able to get the address of of the buffer (which is vulnerable).
+>
+>We then used gdb to analyse the code and got that the offset we needed to alter the return address was 108 bytes.
+>
+>we also put shellcode that calls /bin/sh, and x90 (which means to advance).
+>
+>Here is the exploit we used:
+>
 >>![week10_ctf3](https://media.discordapp.net/attachments/903555414715670578/934209139025010798/unknown.png?width=1440&height=684)
-
-Then we got the flag 
-
+>
+>After running it we get this, which shows the flag:
+>
 >>![week10_ctf4](https://media.discordapp.net/attachments/903555414715670578/934208749428686848/unknown.png)
-
-
