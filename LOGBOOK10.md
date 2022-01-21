@@ -111,3 +111,31 @@
 >>![week10_10](https://cdn.discordapp.com/attachments/903555414715670578/930963266757341254/unknown.png)
 >
 >The attack was successful.
+
+# CTF
+
+### Challenge 1
+
+On this challenge we used the following script to "click" on the "Give the flag" button:
+
+>>![week10_ctf1](https://media.discordapp.net/attachments/903555414715670578/931541225020985375/unknown.png?width=1246&height=701)
+
+Then we waited about 2 minutes until the flag appeared
+
+>>![week10_ctf2](https://media.discordapp.net/attachments/903555414715670578/931541175427563560/unknown.png?width=1246&height=701)
+
+### Challenge 2
+
+The program vulnerability was on gets() function, because it give us the chance to write outside of buffer's alocated space.
+
+To take advantage of the vulnerability we used pwntools module, and used it to get buffer address, we discover where the frame pointer address was and with that information we concluded that the return address was on a 108 bytes offset.
+
+We used the following exploit to complete the atack:
+
+>>![week10_ctf3](https://media.discordapp.net/attachments/903555414715670578/934209139025010798/unknown.png?width=1440&height=684)
+
+Then we got the flag 
+
+>>![week10_ctf4](https://media.discordapp.net/attachments/903555414715670578/934208749428686848/unknown.png)
+
+
